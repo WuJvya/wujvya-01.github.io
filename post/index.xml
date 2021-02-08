@@ -6,7 +6,22 @@
     <description>Recent content in Posts on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 08 Feb 2021 04:56:58 -0800</lastBuildDate><atom:link href="https://wujvya.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 08 Feb 2021 06:41:44 -0800</lastBuildDate><atom:link href="https://wujvya.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Default的使用</title>
+      <link>https://wujvya.github.io/post/default%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Mon, 08 Feb 2021 06:41:44 -0800</pubDate>
+      
+      <guid>https://wujvya.github.io/post/default%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+      <description>########################## 参考：https://blog.csdn.net/qq_35835624/article/details/80196932
+default关键字介绍  default是Java8中引入的关键字，也可以称为Virtual extension methods ---- 虚拟扩展方法。指的是：在接口内部包含了一些默认的方法实现（也就是接口中可以包含方法体，这打破了Java之前版本对接口的语法限制），从而使得接口在进行扩展的时候，不会破坏与接口相关的实现类代码。  为什么要有这个特性？  首先，之前的接口是个双刃剑，好处是面向抽象而不是面向具体编程，缺陷是，当需要修改接口时候，需要修改全部实现该接口的类，目前的java8之前的集合框架没有foreach方法，通常能想到的解决办法是在JDK里给相关的接口添加新的方法及实现。然而，对于已经发布的版本，是没法在给接口添加新方法的同时不影响已有的实现。所以引进的默认方法。他们的目的是为了解决接口的修改与现有的实现不兼容的问题。  如何使用default关键字？ 1、调用父接口实现 创建接口DefaultDemo,并且在此接口中定义默认方法helloWorld()：
+public interface DefaultDemo { /** * 测试在接口中使用default关键字修饰方法 */ default void helloWorld() { System.out.println(&amp;#34;我是DefaultDemo接口中被default修饰的方法。&amp;#34;); } } 这时可以编写一个类实现接口DefaultDemo,并调用接口中定义的默认方法helloWorld()：
+public class MyDefaultDemo implements DefaultDemo { public static void main(String[] args) { // 调用方法  MyDefaultDemo myDefaultDemo = new MyDefaultDemo(); myDefaultDemo.helloWorld(); } } 运行结果：
+关系图：
+2、同时继承两个接口 创建接口DefaultDemo2，同时在此接口定义了默认方法helloWorld()：
+public interface DefaultDemo2 { /** * 测试接口2 */ default void helloWorld(){ System.</description>
+    </item>
+    
     <item>
       <title>MySQL常用语句</title>
       <link>https://wujvya.github.io/post/blog/</link>

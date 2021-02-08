@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Default的使用 // My New Hugo Site</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.80.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://wujvya.github.io/css/main.min.88e7083eff65effb7485b6e6f38d10afbec25093a6fac42d734ce9024d3defbd.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Default的使用"/>
+<meta name="twitter:description" content="########################## 参考：https://blog.csdn.net/qq_35835624/article/details/80196932
+default关键字介绍  default是Java8中引入的关键字，也可以称为Virtual extension methods ---- 虚拟扩展方法。指的是：在接口内部包含了一些默认的方法实现（也就是接口中可以包含方法体，这打破了Java之前版本对接口的语法限制），从而使得接口在进行扩展的时候，不会破坏与接口相关的实现类代码。  为什么要有这个特性？  首先，之前的接口是个双刃剑，好处是面向抽象而不是面向具体编程，缺陷是，当需要修改接口时候，需要修改全部实现该接口的类，目前的java8之前的集合框架没有foreach方法，通常能想到的解决办法是在JDK里给相关的接口添加新的方法及实现。然而，对于已经发布的版本，是没法在给接口添加新方法的同时不影响已有的实现。所以引进的默认方法。他们的目的是为了解决接口的修改与现有的实现不兼容的问题。  如何使用default关键字？ 1、调用父接口实现 创建接口DefaultDemo,并且在此接口中定义默认方法helloWorld()：
+public interface DefaultDemo { /** * 测试在接口中使用default关键字修饰方法 */ default void helloWorld() { System.out.println(&#34;我是DefaultDemo接口中被default修饰的方法。&#34;); } } 这时可以编写一个类实现接口DefaultDemo,并调用接口中定义的默认方法helloWorld()：
+public class MyDefaultDemo implements DefaultDemo { public static void main(String[] args) { // 调用方法  MyDefaultDemo myDefaultDemo = new MyDefaultDemo(); myDefaultDemo.helloWorld(); } } 运行结果：
+关系图：
+2、同时继承两个接口 创建接口DefaultDemo2，同时在此接口定义了默认方法helloWorld()：
+public interface DefaultDemo2 { /** * 测试接口2 */ default void helloWorld(){ System."/>
+
+    <meta property="og:title" content="Default的使用" />
+<meta property="og:description" content="########################## 参考：https://blog.csdn.net/qq_35835624/article/details/80196932
+default关键字介绍  default是Java8中引入的关键字，也可以称为Virtual extension methods ---- 虚拟扩展方法。指的是：在接口内部包含了一些默认的方法实现（也就是接口中可以包含方法体，这打破了Java之前版本对接口的语法限制），从而使得接口在进行扩展的时候，不会破坏与接口相关的实现类代码。  为什么要有这个特性？  首先，之前的接口是个双刃剑，好处是面向抽象而不是面向具体编程，缺陷是，当需要修改接口时候，需要修改全部实现该接口的类，目前的java8之前的集合框架没有foreach方法，通常能想到的解决办法是在JDK里给相关的接口添加新的方法及实现。然而，对于已经发布的版本，是没法在给接口添加新方法的同时不影响已有的实现。所以引进的默认方法。他们的目的是为了解决接口的修改与现有的实现不兼容的问题。  如何使用default关键字？ 1、调用父接口实现 创建接口DefaultDemo,并且在此接口中定义默认方法helloWorld()：
+public interface DefaultDemo { /** * 测试在接口中使用default关键字修饰方法 */ default void helloWorld() { System.out.println(&#34;我是DefaultDemo接口中被default修饰的方法。&#34;); } } 这时可以编写一个类实现接口DefaultDemo,并调用接口中定义的默认方法helloWorld()：
+public class MyDefaultDemo implements DefaultDemo { public static void main(String[] args) { // 调用方法  MyDefaultDemo myDefaultDemo = new MyDefaultDemo(); myDefaultDemo.helloWorld(); } } 运行结果：
+关系图：
+2、同时继承两个接口 创建接口DefaultDemo2，同时在此接口定义了默认方法helloWorld()：
+public interface DefaultDemo2 { /** * 测试接口2 */ default void helloWorld(){ System." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://wujvya.github.io/post/default%E7%9A%84%E4%BD%BF%E7%94%A8/" />
+<meta property="article:published_time" content="2021-02-08T06:41:44-08:00" />
+<meta property="article:modified_time" content="2021-02-08T06:41:44-08:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://wujvya.github.io"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <h1>My New Hugo Site</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium.</p>
+      <div class="app-header-social">
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Default的使用</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Feb 8, 2021
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <p>##########################
+参考：<a href="https://blog.csdn.net/qq_35835624/article/details/80196932"><strong>https://blog.csdn.net/qq_35835624/article/details/80196932</strong></a></p>
+<h1 id="default关键字介绍">default关键字介绍</h1>
+<pre><code>   default是Java8中引入的关键字，也可以称为Virtual extension methods ---- 虚拟扩展方法。指的是：在接口内部包含了一些默认的方法实现（也就是接口中可以包含方法体，这打破了Java之前版本对接口的语法限制），从而使得接口在进行扩展的时候，不会破坏与接口相关的实现类代码。
+</code></pre>
+<h1 id="为什么要有这个特性">为什么要有这个特性？</h1>
+<pre><code>   首先，之前的接口是个双刃剑，好处是面向抽象而不是面向具体编程，缺陷是，当需要修改接口时候，需要修改全部实现该接口的类，目前的java8之前的集合框架没有foreach方法，通常能想到的解决办法是在JDK里给相关的接口添加新的方法及实现。然而，对于已经发布的版本，是没法在给接口添加新方法的同时不影响已有的实现。所以引进的默认方法。他们的目的是为了解决接口的修改与现有的实现不兼容的问题。
+</code></pre>
+<h1 id="如何使用default关键字">如何使用default关键字？</h1>
+<h2 id="1调用父接口实现">1、调用父接口实现</h2>
+<p>创建接口DefaultDemo,并且在此接口中定义默认方法helloWorld()：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">DefaultDemo</span> <span style="color:#f92672">{</span>
+
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * 测试在接口中使用default关键字修饰方法
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">helloWorld</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;我是DefaultDemo接口中被default修饰的方法。&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>这时可以编写一个类实现接口DefaultDemo,并调用接口中定义的默认方法helloWorld()：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyDefaultDemo</span> <span style="color:#66d9ef">implements</span> DefaultDemo <span style="color:#f92672">{</span>
+
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#75715e">// 调用方法
+</span><span style="color:#75715e"></span>        MyDefaultDemo myDefaultDemo <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> MyDefaultDemo<span style="color:#f92672">();</span>
+        myDefaultDemo<span style="color:#f92672">.</span><span style="color:#a6e22e">helloWorld</span><span style="color:#f92672">();</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>运行结果：</p>
+<p><img src="https://tcs.teambition.net/storage/312073b84b4c08767575208fa1021a8efd69?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYxMzM5OTc1MiwiaWF0IjoxNjEyNzk0OTUyLCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzMxMjA3M2I4NGI0YzA4NzY3NTc1MjA4ZmExMDIxYThlZmQ2OSJ9.Rn5vhJEoEjdGxaZN6h4cljZlMu3UozPNUnHVjNcoF_A&amp;download=image.png" alt="" title=""></p>
+<p>关系图：</p>
+<p><img src="https://tcs.teambition.net/storage/3120d3bd8ca85f73920e78e45d2130c368a9?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYxMzM5OTc1MiwiaWF0IjoxNjEyNzk0OTUyLCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzMxMjBkM2JkOGNhODVmNzM5MjBlNzhlNDVkMjEzMGMzNjhhOSJ9.ZAR_q_BmRSCfKNQYdeADeBIfeFpVu9mAUEuLn_jR5Os&amp;download=image.png" alt="" title=""></p>
+<h2 id="2同时继承两个接口">2、同时继承两个接口</h2>
+<p>创建接口DefaultDemo2，同时在此接口定义了默认方法helloWorld()：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">DefaultDemo2</span> <span style="color:#f92672">{</span>
+
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * 测试接口2
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">helloWorld</span><span style="color:#f92672">(){</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;我是DefaultDemo2接口中被default修饰的方法。&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>让MyDefaultDemo同时继承DefaultDemo和DefaultDemo2：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyDefaultDemo</span> <span style="color:#66d9ef">implements</span> DefaultDemo<span style="color:#f92672">,</span>DefaultDemo2 <span style="color:#f92672">{</span>
+
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#75715e">// 调用方法
+</span><span style="color:#75715e"></span>        MyDefaultDemo myDefaultDemo <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> MyDefaultDemo<span style="color:#f92672">();</span>
+        myDefaultDemo<span style="color:#f92672">.</span><span style="color:#a6e22e">helloWorld</span><span style="color:#f92672">();</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>上面的代码会编译报错，因为这两个接口中有用default修饰的同名的方法（默认方法），编译器不知道该继承谁，所以要同时实现这两个接口，就要重构方法，添加的方法：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Override</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">helloWorld</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;我是MyDefaultDemo类中重写的方法。&#34;</span><span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>重写方法后运行结果：</p>
+<p><img src="https://tcs.teambition.net/storage/312029041f88c4bb626d82ece099d1ac3887?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYxMzM5OTc1MiwiaWF0IjoxNjEyNzk0OTUyLCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzMxMjAyOTA0MWY4OGM0YmI2MjZkODJlY2UwOTlkMWFjMzg4NyJ9.XafLBZEWeKD2x9So8aydxcA8vOwrbe0jGJ64QMpE9_w&amp;download=image.png" alt="" title=""></p>
+<p>关系图：</p>
+<p><img src="https://tcs.teambition.net/storage/312000cf6f89d0dc79d17e853b35bb6b6d5e?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYxMzM5OTc1MiwiaWF0IjoxNjEyNzk0OTUyLCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzMxMjAwMGNmNmY4OWQwZGM3OWQxN2U4NTNiMzViYjZiNmQ1ZSJ9.UKlXzANN_eKl5BSjL9lxuy6QCaQ4uwCgEit3C0EqYbk&amp;download=image.png" alt="" title=""></p>
+<h2 id="3类优先于接口">3、类优先于接口</h2>
+<p>再创建一个类MyDefaultDemo2，使其继承MyDefaultDemo，实现DefaultDemo和DefaultDemo2：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyDefaultDemo2</span> <span style="color:#66d9ef">extends</span> MyDefaultDemo <span style="color:#66d9ef">implements</span> DefaultDemo<span style="color:#f92672">,</span>DefaultDemo2<span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#75715e">// 创建 MyDefaultDemo2 对象
+</span><span style="color:#75715e"></span>        MyDefaultDemo2 myDefaultDemo2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> MyDefaultDemo2<span style="color:#f92672">();</span>
+        <span style="color:#75715e">// 调用 helloWorld() 方法
+</span><span style="color:#75715e"></span>        myDefaultDemo2<span style="color:#f92672">.</span><span style="color:#a6e22e">helloWorld</span><span style="color:#f92672">();</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>此时实现类MyDefaultDemo2中调用helloWorld()方法，执行的是MyDefaultDemo中的helloWorld()方法，运行结果：</p>
+<p><img src="https://tcs.teambition.net/storage/312041b2d2418916087de1bf588cec5fb7e9?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYxMzM5OTc1MiwiaWF0IjoxNjEyNzk0OTUyLCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzMxMjA0MWIyZDI0MTg5MTYwODdkZTFiZjU4OGNlYzVmYjdlOSJ9.ru-Ad2o_Ksjjy73euFE3ekFAaQN12-39h-llLgpTecE&amp;download=image.png" alt="" title=""></p>
+<p>关系图：</p>
+<p><img src="https://tcs.teambition.net/storage/3120b8ac773b012b4a09ffb2e30770e9355f?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYxMzM5OTc1MiwiaWF0IjoxNjEyNzk0OTUyLCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzMxMjBiOGFjNzczYjAxMmI0YTA5ZmZiMmUzMDc3MGU5MzU1ZiJ9.RJ0S5iI3GgXMfiXnG0VFWtsZvN0uFja2KJD23ld0ppI&amp;download=image.png" alt="" title=""></p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
