@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on My New Hugo Site</title>
+    <link>https://wujvya.github.io/post/</link>
+    <description>Recent content in Posts on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 08 Feb 2021 04:56:58 -0800</lastBuildDate><atom:link href="https://wujvya.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MySQL常用语句</title>
+      <link>https://wujvya.github.io/post/blog/</link>
+      <pubDate>Mon, 08 Feb 2021 04:56:58 -0800</pubDate>
+      
+      <guid>https://wujvya.github.io/post/blog/</guid>
+      <description>数据库常用语句 数据库 -- 需要自己输入的为中文，“[ ]”内为选填项  -- 创建数据库 create database 数据库 [character set 字符集] [collate 校对规则]; -- 查看所有数据库 show database; -- 查看数据库的定义结构 show create database 数据库; -- 删除数据库 drop database 数据库; -- 修改数据库：只能修改字符集，utf-8写作utf8 alter database 数据库 character set 字符集; -- 切换数据库 use 数据库; -- 查看正在使用的数据库 select database(); 数据表 -- 创建数据表-------------------------------------------------- create table 表名( 字段 字段类型 [约束], ...... 字段 字段类型 [约束] ); -- 约束 not null	-- 不为空 unique -- 唯一 primary key	-- 主键,一般用于id,后面一般加 auto_increment //自增  -- 查看表-------------------------------------------------- -- 查看所有表 show tables; -- 查看表的定义结构 desc 表; -- 修改表-------------------------------------------------- -- 增加字段 alter table 表 add 字段 类型 约束; -- 修改列的类型约束 alter table 表 字段 类型 约束; -- 修改字段的名称、类型、约束 alter table 表 change 旧字段 新字段 类型 约束; -- 删除字段 alter table 表 drop 字段; -- 修改表名 rename table 旧表 to 新表; -- 删除表-------------------------------------------------- drop table 表; 记录 增删改 -- 增-------------------------------------------------- -- 插入特定字段 insert into 表(列,列,.</description>
+    </item>
+    
+  </channel>
+</rss>
